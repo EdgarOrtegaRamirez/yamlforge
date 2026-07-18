@@ -157,17 +157,17 @@ func StatsString(s *models.YAMLStats) string {
 // StatsToMap converts stats to a map for JSON output.
 func StatsToMap(s *models.YAMLStats) map[string]interface{} {
 	return map[string]interface{}{
-		"total_nodes":     s.TotalNodes,
-		"mapping_nodes":   s.MappingNodes,
-		"sequence_nodes":  s.SequenceNodes,
-		"scalar_nodes":    s.ScalarNodes,
-		"max_depth":       s.MaxDepth,
-		"total_keys":      s.TotalKeys,
-		"unique_keys":     len(s.KeyFrequency),
-		"line_count":      s.LineCount,
-		"anchor_count":    s.AnchorCount,
-		"alias_count":     s.AliasCount,
-		"tag_count":       s.TagCount,
-		"key_frequency":   s.KeyFrequency,
+		"total_nodes":    s.TotalNodes,
+		"mapping_nodes":  s.MappingNodes,
+		"sequence_nodes": s.SequenceNodes,
+		"scalar_nodes":   s.ScalarNodes,
+		"max_depth":      s.MaxDepth,
+		"total_keys":     s.TotalKeys,
+		"unique_keys":    len(s.KeyFrequency),
+		"line_count":     s.LineCount,
+		"anchor_count":   s.AnchorCount,
+		"alias_count":    s.AliasCount,
+		"tag_count":      s.TagCount,
+		"key_frequency":  s.KeyFrequency,
 	}
 }

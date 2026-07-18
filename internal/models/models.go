@@ -180,7 +180,7 @@ type LintIssue struct {
 
 // LintReport contains all lint issues for a file.
 type LintReport struct {
-	File  string
+	File   string
 	Issues []LintIssue
 }
 

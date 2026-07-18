@@ -12,13 +12,13 @@ import (
 
 // Schema defines validation rules for YAML.
 type Schema struct {
-	Required   []string            `yaml:"required"`
-	Types      map[string]string   `yaml:"types"`
-	Enums      map[string][]string `yaml:"enums"`
-	MinLength  map[string]int      `yaml:"min_length"`
-	MaxLength  map[string]int      `yaml:"max_length"`
-	Patterns   map[string]string   `yaml:"patterns"`
-	Nested     map[string]*Schema  `yaml:"nested"`
+	Required  []string            `yaml:"required"`
+	Types     map[string]string   `yaml:"types"`
+	Enums     map[string][]string `yaml:"enums"`
+	MinLength map[string]int      `yaml:"min_length"`
+	MaxLength map[string]int      `yaml:"max_length"`
+	Patterns  map[string]string   `yaml:"patterns"`
+	Nested    map[string]*Schema  `yaml:"nested"`
 }
 
 // Engine validates YAML against schemas.
@@ -224,10 +224,10 @@ func InferSchema(data []byte) (*Schema, error) {
 	}
 
 	schema := &Schema{
-		Required:  make([]string, 0),
-		Types:     make(map[string]string),
-		Enums:     make(map[string][]string),
-		Nested:    make(map[string]*Schema),
+		Required: make([]string, 0),
+		Types:    make(map[string]string),
+		Enums:    make(map[string][]string),
+		Nested:   make(map[string]*Schema),
 	}
 
 	// Handle DocumentNode — unwrap to actual content

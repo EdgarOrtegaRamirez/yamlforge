@@ -206,8 +206,10 @@ func (r *NoDuplicateKeys) CheckFile(path string, data []byte) []models.LintIssue
 // TruthyValues checks for ambiguous truthy values using raw text.
 type TruthyValues struct{}
 
-func (r *TruthyValues) Name() string        { return "truthy-values" }
-func (r *TruthyValues) Description() string { return "Checks for ambiguous truthy values (yes/no/on/off)" }
+func (r *TruthyValues) Name() string { return "truthy-values" }
+func (r *TruthyValues) Description() string {
+	return "Checks for ambiguous truthy values (yes/no/on/off)"
+}
 
 var truthyPattern = regexp.MustCompile(`:\s*(yes|no|on|off|Yes|No|YES|NO|ON|OFF)\s*$`)
 

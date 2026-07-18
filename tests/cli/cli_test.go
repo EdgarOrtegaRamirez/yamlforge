@@ -10,7 +10,7 @@ import (
 func buildBinary(t *testing.T) string {
 	t.Helper()
 	binary := filepath.Join(t.TempDir(), "yamlforge")
-	
+
 	// Find project root by walking up from current directory
 	projectRoot := ""
 	dir, err := os.Getwd()
@@ -28,7 +28,7 @@ func buildBinary(t *testing.T) string {
 		}
 		dir = parent
 	}
-	
+
 	cmd := exec.Command("go", "build", "-o", binary, "./cmd/yamlforge")
 	cmd.Dir = projectRoot
 	if out, err := cmd.CombinedOutput(); err != nil {

@@ -11,20 +11,20 @@ import (
 
 // Options controls formatting behavior.
 type Options struct {
-	Indent      int
-	SortKeys    bool
-	FlowStyle   bool
-	Width       int
-	Prefix      string
+	Indent    int
+	SortKeys  bool
+	FlowStyle bool
+	Width     int
+	Prefix    string
 }
 
 // DefaultOptions returns default formatting options.
 func DefaultOptions() Options {
 	return Options{
-		Indent:   2,
-		SortKeys: false,
+		Indent:    2,
+		SortKeys:  false,
 		FlowStyle: false,
-		Width:    80,
+		Width:     80,
 	}
 }
 
